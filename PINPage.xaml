@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="FundamentalMauiApp.PINPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Grid.Row="0" Spacing="16" Margin="0,48,0,0">
+            <Label Text="Masukkan PIN"
+                   TextColor="Black"
+                   FontSize="24"
+                   FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Text="Gunakan PIN Aplikasi Anda"
+                   TextColor="Black"
+                   FontSize="14" HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+        <HorizontalStackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="16">
+            <Frame x:Name="Icon1"
+                   BackgroundColor="LightGray"
+                   CornerRadius="50"
+                   HeightRequest="8"
+                   WidthRequest="8" />
+            <Frame x:Name="Icon2"
+                   BackgroundColor="LightGray"
+                   CornerRadius="50"
+                   HeightRequest="8"
+                   WidthRequest="8" />
+            <Frame x:Name="Icon3"
+                   BackgroundColor="LightGray"
+                   CornerRadius="50"
+                   HeightRequest="8"
+                   WidthRequest="8" />
+            <Frame x:Name="Icon4"
+                   BackgroundColor="LightGray"
+                   CornerRadius="50"
+                   HeightRequest="8"
+                   WidthRequest="8" />
+            <Frame x:Name="Icon5"
+                   BackgroundColor="LightGray"
+                   CornerRadius="50"
+                   HeightRequest="8"
+                   WidthRequest="8" />
+            <Frame x:Name="Icon6"
+                   BackgroundColor="LightGray"
+                   CornerRadius="50"
+                   HeightRequest="8"
+                   WidthRequest="8" />
+        </HorizontalStackLayout>
+        <VerticalStackLayout Grid.Row="2" Spacing="16">
+            <FlexLayout JustifyContent="SpaceAround">
+                <Button Text="7" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum7Click">
+                </Button>
+                <Button Text="8" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum8Click">
+                </Button>
+                <Button Text="9" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum9Click">
+                </Button>
+            </FlexLayout>
+            <FlexLayout JustifyContent="SpaceAround">
+                <Button Text="4" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum4Click">
+                </Button>
+                <Button Text="5" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum5Click">
+                </Button>
+                <Button Text="6" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum6Click">
+                </Button>
+            </FlexLayout>
+            <FlexLayout JustifyContent="SpaceAround">
+                <Button Text="1" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum1Click">
+                </Button>
+                <Button Text="2" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum2Click">
+                </Button>
+                <Button Text="3" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White" Clicked="OnButtonNum3Click">
+                </Button>
+            </FlexLayout>
+            <FlexLayout JustifyContent="SpaceAround">
+                <Button Text="Lupa?" WidthRequest="64" HeightRequest="64" FontSize="12" FontAttributes="Bold"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        Clicked="OnButtonNum0Click">
+                </Button>
+                <Button Text="0" WidthRequest="64" HeightRequest="64" FontSize="32" TextColor="Black"
+                        BackgroundColor="White"
+                        Clicked="OnButtonNum0Click">
+                </Button>
+                <ImageButton WidthRequest="64" HeightRequest="64" Source="prev.png"
+                             BackgroundColor="White"
+                             Clicked="OnButtonDeleteClick">
+                </ImageButton>
+            </FlexLayout>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
