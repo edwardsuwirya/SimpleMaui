@@ -3,27 +3,51 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.NavBarIsVisible="False"
+             xmlns:lang="clr-namespace:FundamentalMauiApp.Resources.String"
              x:Class="FundamentalMauiApp.LoginPage">
-    <VerticalStackLayout Spacing="25" Padding="36,0" VerticalOptions="Center">
-        <Image Source="dotnet_bot.png" HeightRequest="150" WidthRequest="150" />
+    <!-- These resources and styles are available only on this specific XAML page. -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="buttonPrimaryColor">#512BD4</Color>
+            <Color x:Key="textButtonPrimaryColor">#ACACAC</Color>
+            <Color x:Key="textButtonSecondaryColor">#DFD8F7</Color>
+            <Color x:Key="textSecondaryColor">#DFD8F7</Color>
+            <x:Double x:Key="bigFontSize">24</x:Double>
+            <x:Double x:Key="mediumFontSize">18</x:Double>
+            <x:Double x:Key="bigSpacing">24</x:Double>
+            <x:Double x:Key="tinySpacing">8</x:Double>
+            <x:String x:Key="imgLogo">dotnet_bot.png</x:String>
+            <x:String x:Key="imgUser">user.png</x:String>
+            <x:String x:Key="imgLock">lock.png</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <VerticalStackLayout Spacing="5">
-            <Label Text="Welcome" FontSize="24" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
-            <Label Text="Login to your account" FontSize="18" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+    <VerticalStackLayout Spacing="{StaticResource bigSpacing}" Padding="36,0" VerticalOptions="Center">
+        <Image Source="{StaticResource imgLogo}" HeightRequest="150" WidthRequest="150" />
+
+        <VerticalStackLayout Spacing="{StaticResource tinySpacing}">
+            <Label Text="{x:Static   lang:Greetings.Welcome}" FontSize="{StaticResource bigFontSize}" TextColor="Gray"
+                   HorizontalTextAlignment="Center">
+            </Label>
+            <Label Text="{x:Static   lang:Greetings.WelcomeSub}" FontSize="{StaticResource mediumFontSize}"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center">
+            </Label>
         </VerticalStackLayout>
 
-        <VerticalStackLayout Spacing="8">
+        <VerticalStackLayout Spacing="{StaticResource tinySpacing}">
             <Grid HorizontalOptions="Fill">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
                 <Frame HasShadow="True" BorderColor="White" HeightRequest="64" WidthRequest="64" CornerRadius="32">
-                    <Image Source="user.png" HeightRequest="24" WidthRequest="24"></Image>
+                    <Image Source="{StaticResource imgUser}" HeightRequest="24" WidthRequest="24"></Image>
                 </Frame>
                 <Frame Grid.Column="1" HasShadow="True" HeightRequest="48" Margin="-24,0,0,0" Padding="0"
                        BorderColor="White">
-                    <Entry x:Name="EntryUserName" Margin="12,0,0,0" VerticalOptions="Center" Placeholder="User Name"
+                    <Entry x:Name="EntryUserName" Margin="12,0,0,0" VerticalOptions="Center"
+                           Placeholder="{x:Static   lang:Greetings.UserName}"
                            Keyboard="Email">
                     </Entry>
                 </Frame>
@@ -34,19 +58,24 @@
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
                 <Frame HasShadow="True" BorderColor="White" HeightRequest="64" WidthRequest="64" CornerRadius="32">
-                    <Image Source="lock.png" HeightRequest="24" WidthRequest="24"></Image>
+                    <Image Source="{StaticResource imgLock}" HeightRequest="24" WidthRequest="24"></Image>
                 </Frame>
                 <Frame Grid.Column="1" HasShadow="True" HeightRequest="48" Margin="-24,0,0,0" Padding="0"
                        BorderColor="White">
-                    <Entry x:Name="EntryPassword" Margin="12,0,0,0" VerticalOptions="Center" Placeholder="Password"
+                    <Entry x:Name="EntryPassword" Margin="12,0,0,0" VerticalOptions="Center"
+                           Placeholder="{x:Static   lang:Greetings.Password}"
                            IsPassword="True">
                     </Entry>
                 </Frame>
             </Grid>
-            <Frame x:Name="FrameButtonSignIn" BackgroundColor="DarkBlue" Padding="8" Margin="16" CornerRadius="8">
-                <HorizontalStackLayout HorizontalOptions="Center" Spacing="8">
-                    <ActivityIndicator x:Name="IndicatorSignIn" IsRunning="True" HeightRequest="16" WidthRequest="16" Color="White" />
-                    <Label x:Name="LabelSignIn" TextColor="White" Text="Sign In" FontSize="18" VerticalTextAlignment="Center"
+            <Frame x:Name="FrameButtonSignIn" BackgroundColor="{DynamicResource buttonPrimaryColor}" Padding="8"
+                   Margin="16" CornerRadius="8">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="{StaticResource tinySpacing}">
+                    <ActivityIndicator x:Name="IndicatorSignIn" IsRunning="True" HeightRequest="16" WidthRequest="16"
+                                       Color="White" />
+                    <Label x:Name="LabelSignIn" TextColor="{DynamicResource textButtonSecondaryColor}" Text="{x:Static   lang:Greetings.SignIn}"
+                           FontSize="18"
+                           VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Center">
                     </Label>
                 </HorizontalStackLayout>
@@ -54,9 +83,11 @@
                     <TapGestureRecognizer Tapped="OnSignIn" NumberOfTapsRequired="1" />
                 </Frame.GestureRecognizers>
             </Frame>
-            <HorizontalStackLayout Spacing="6" HorizontalOptions="Center" Margin="0,32,0,0">
-                <Label Text="Don't have account ?" TextColor="Gray"></Label>
-                <Label Text="Sign up here" TextColor="LightBlue"></Label>
+            <HorizontalStackLayout Spacing="{StaticResource tinySpacing}" HorizontalOptions="Center" Margin="0,32,0,0">
+                <Label Text="{x:Static   lang:Greetings.NotHaveAccount}"
+                       TextColor="{StaticResource textButtonPrimaryColor}">
+                </Label>
+                <Label Text="{x:Static   lang:Greetings.SignUp}" TextColor="{StaticResource textSecondaryColor}"></Label>
             </HorizontalStackLayout>
         </VerticalStackLayout>
 
