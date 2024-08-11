@@ -17,12 +17,19 @@ public partial class LoginPage : ContentPage
 
     private async void OnSignIn(Object e, EventArgs s)
     {
+        var buttonFrameNormalStyle = Application.Current?.Resources["ButtonFrameNormal"] as Style;
+        var buttonFrameDisabledStyle = Application.Current?.Resources["ButtonFrameDisabled"] as Style;
+        var buttonFrameLabelNormalStyle = Application.Current?.Resources["ButtonLabelNormal"] as Style;
+        var buttonFrameLabelDisabledStyle = Application.Current?.Resources["ButtonLabelDisabled"] as Style;
+
         FrameButtonSignIn.IsEnabled = false;
         IndicatorSignIn.IsVisible = true;
         LabelSignIn.Text = Greetings.PleaseWait;
-        Resources["buttonPrimaryColor"] = "#9880e5";
-        Resources["textButtonSecondaryColor"] = Colors.Gray;
-        
+
+
+        FrameButtonSignIn.Style = buttonFrameDisabledStyle;
+        LabelSignIn.Style = buttonFrameLabelDisabledStyle;
+
         await Task.Delay(3000);
         var userName = EntryUserName.Text;
         var password = EntryPassword.Text;
@@ -39,7 +46,7 @@ public partial class LoginPage : ContentPage
         IndicatorSignIn.IsVisible = false;
         LabelSignIn.Text = Greetings.SignIn;
         FrameButtonSignIn.IsEnabled = true;
-        Resources["buttonPrimaryColor"] = "#512BD4";
-        Resources["textButtonSecondaryColor"] = "#DFD8F7";
+        FrameButtonSignIn.Style = buttonFrameNormalStyle;
+        LabelSignIn.Style = buttonFrameLabelNormalStyle;
     }
 }
