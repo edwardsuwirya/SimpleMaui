@@ -15,6 +15,21 @@ public partial class LoginPage : ContentPage
         IndicatorSignIn.IsVisible = false;
     }
 
+    private async void OnSignUp(Object e, EventArgs s)
+    {
+        // GoToAsync will not create multiple instance of the same page
+        // PushAsync will create multiple instance
+        
+        // await Shell.Current.GoToAsync(nameof(SignUpPage));
+        // await Shell.Current.GoToAsync($"{nameof(SignUpPage)}?param=new");
+        var navigationParam = new Dictionary<string, object>
+        {
+            { "param1", "new" },
+            { "param2", "mobile" }
+        };
+        await Shell.Current.GoToAsync($"{nameof(SignUpPage)}", navigationParam);
+    }
+
     private async void OnSignIn(Object e, EventArgs s)
     {
         var buttonFrameNormalStyle = Application.Current?.Resources["ButtonFrameNormal"] as Style;
@@ -30,13 +45,13 @@ public partial class LoginPage : ContentPage
         FrameButtonSignIn.Style = buttonFrameDisabledStyle;
         LabelSignIn.Style = buttonFrameLabelDisabledStyle;
 
-        await Task.Delay(3000);
+        await Task.Delay(1500);
         var userName = EntryUserName.Text;
         var password = EntryPassword.Text;
 
-        if (userName == "enigma" && password == "12345")
+        if (userName == "edo" && password == "123")
         {
-            await DisplayAlert(Greetings.Info, Greetings.Welcome, Greetings.Ok);
+            await Shell.Current.GoToAsync("//PinPage");
         }
         else
         {

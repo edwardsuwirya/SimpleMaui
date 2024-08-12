@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#aa000000"
+             x:Class="FundamentalMauiApp.ReligionPopupPage">
+    <ContentPage.Content>
+        <Border
+            VerticalOptions="End"
+            Background="White"
+            Padding="30">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="40,40,0,0" />
+            </Border.StrokeShape>
+            <VerticalStackLayout>
+                <Label Text="Islam" />
+                <Label Text="Katolik" />
+                <Label Text="Kristen" />
+                <Label Text="Hindu" />
+                <Label Text="Budha" />
+                <Button Text="Choose" Clicked="OnChooseReligion"></Button>
+            </VerticalStackLayout>
+        </Border>
+    </ContentPage.Content>
+</ContentPage>
