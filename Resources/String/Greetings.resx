@@ -69,4 +69,7 @@
     <data name="Create" xml:space="preserve">
         <value>Create</value>
     </data>
+    <data name="AlreadyHaveAccount" xml:space="preserve">
+        <value>Have an account?</value>
+    </data>
 </root>

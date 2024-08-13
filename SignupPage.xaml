@@ -31,14 +31,23 @@
                                IsPassword="True">
                         </Entry>
                     </Frame>
+                    <Button Text="Choose religion" Clicked="OnPopReligion"></Button>
                     <HorizontalStackLayout>
                         <CheckBox Color="{StaticResource Primary}"></CheckBox>
-                        <Label Text="{x:Static lang:Greetings.Understand}" Style="{StaticResource InfoLabel}" VerticalOptions="Center">
+                        <Label Text="{x:Static lang:Greetings.Understand}" Style="{StaticResource InfoLabel}"
+                               VerticalOptions="Center">
                         </Label>
                     </HorizontalStackLayout>
-
                     <Button Text="{x:Static lang:Greetings.Create}" Style="{StaticResource ButtonLabelNormal}"></Button>
-
+                    <HorizontalStackLayout Margin="0,16,0,0">
+                        <Label Text="{x:Static   lang:Greetings.AlreadyHaveAccount}" Margin="8,0"></Label>
+                        <Label Text="{x:Static lang:Greetings.SignIn}"
+                               Style="{StaticResource TextButtonLabel}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSignIn" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
                 </VerticalStackLayout>
             </VerticalStackLayout>
         </Grid>

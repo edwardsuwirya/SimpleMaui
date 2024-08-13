@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FundamentalMauiApp.Resources.String;
 
 namespace FundamentalMauiApp;
@@ -19,7 +14,7 @@ public partial class LoginPage : ContentPage
     {
         // GoToAsync will not create multiple instance of the same page
         // PushAsync will create multiple instance
-        
+
         // await Shell.Current.GoToAsync(nameof(SignUpPage));
         // await Shell.Current.GoToAsync($"{nameof(SignUpPage)}?param=new");
         var navigationParam = new Dictionary<string, object>
@@ -27,7 +22,7 @@ public partial class LoginPage : ContentPage
             { "param1", "new" },
             { "param2", "mobile" }
         };
-        await Shell.Current.GoToAsync($"{nameof(SignUpPage)}", navigationParam);
+        await Shell.Current.GoToAsync($"//{nameof(SignupPage)}", navigationParam);
     }
 
     private async void OnSignIn(Object e, EventArgs s)

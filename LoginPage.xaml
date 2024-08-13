@@ -65,7 +65,8 @@
             <HorizontalStackLayout Spacing="{StaticResource TinySpacing}" HorizontalOptions="Center" Margin="0,32,0,0">
                 <Label Text="{x:Static   lang:Greetings.NotHaveAccount}" Style="{StaticResource InfoLabel}">
                 </Label>
-                <Label Text="{x:Static   lang:Greetings.SignUp}" Style="{StaticResource TextButtonLabel}">
+                <Label Text="{x:Static   lang:Greetings.SignUp}"
+                       Style="{StaticResource TextButtonLabel}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnSignUp" NumberOfTapsRequired="1"></TapGestureRecognizer>
                     </Label.GestureRecognizers>

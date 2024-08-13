@@ -18,7 +18,11 @@
                 <Label Text="Kristen" />
                 <Label Text="Hindu" />
                 <Label Text="Budha" />
-                <Button Text="Choose" Clicked="OnChooseReligion"></Button>
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="8" VerticalOptions="Fill">
+                    <Button Text="Cancel" Clicked="OnCancelReligion"></Button>
+                    <Button Grid.Column="1" Text="Choose" Clicked="OnChooseReligion"></Button>
+                </Grid>
+
             </VerticalStackLayout>
         </Border>
     </ContentPage.Content>

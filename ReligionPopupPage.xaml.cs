@@ -5,6 +5,7 @@ namespace FundamentalMauiApp;
 public partial class ReligionPopupPage : ContentPage
 {
     private IChooseEvent _event;
+
     public ReligionPopupPage(IChooseEvent ev)
     {
         InitializeComponent();
@@ -14,6 +15,11 @@ public partial class ReligionPopupPage : ContentPage
     private async void OnChooseReligion(object o, EventArgs s)
     {
         _event.OnChoose("Budha");
+        await Navigation.PopModalAsync();
+    }
+
+    private async void OnCancelReligion(object o, EventArgs s)
+    {
         await Navigation.PopModalAsync();
     }
 

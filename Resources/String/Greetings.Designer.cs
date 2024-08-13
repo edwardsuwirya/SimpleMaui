@@ -146,5 +146,11 @@ namespace FundamentalMauiApp.Resources.String {
                 return ResourceManager.GetString("Create", resourceCulture);
             }
         }
+        
+        internal static string AlreadyHaveAccount {
+            get {
+                return ResourceManager.GetString("AlreadyHaveAccount", resourceCulture);
+            }
+        }
     }
 }

@@ -12,6 +12,10 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage" />
+    <ShellContent
+        Title="Sign Up"
+        ContentTemplate="{DataTemplate local:SignupPage}"
+        Route="SignupPage" />
     <TabBar>
         <Tab Title="PIN"
              Icon="moon.png">
