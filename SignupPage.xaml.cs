@@ -24,6 +24,10 @@ public partial class SignupPage : ContentPage, IChooseEvent
         InitializeComponent();
     }
 
+    protected override bool OnBackButtonPressed()
+    {
+        return true;
+    }
 
     private async void OnPopReligion(object o, EventArgs s)
     {
