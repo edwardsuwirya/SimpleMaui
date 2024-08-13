@@ -22,6 +22,8 @@
             <x:String x:Key="ImgLogo">dotnet_bot.png</x:String>
             <x:String x:Key="ImgUser">user.png</x:String>
             <x:String x:Key="ImgLock">lock.png</x:String>
+            <x:String x:Key="BgStudy">study_program.png</x:String>
+            <x:String x:Key="SmallMargin">8,0,0,0</x:String>
 
             <Style x:Key="BaseButtonFrame" TargetType="Frame">
                 <Setter Property="Padding" Value="{StaticResource SmallAllPadding}" />
@@ -63,6 +65,24 @@
             <Style x:Key="TextButtonLabel" TargetType="Label">
                 <Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
                 <Setter Property="TextColor" Value="{StaticResource Secondary}" />
+            </Style>
+
+            <Style x:Key="UserEntry" TargetType="Entry">
+                <Setter Property="Margin" Value="{StaticResource SmallMargin}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="UserEntryFrame" TargetType="Frame">
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="BorderColor" Value="{StaticResource White}" />
+            </Style>
+            <Style x:Key="IconCircleFrame" TargetType="Frame">
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="HeightRequest" Value="64" />
+                <Setter Property="WidthRequest" Value="64" />
+                <Setter Property="CornerRadius" Value="32" />
+                <Setter Property="BorderColor" Value="{StaticResource White}" />
             </Style>
         </ResourceDictionary>
 

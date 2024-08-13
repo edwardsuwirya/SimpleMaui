@@ -47,4 +47,19 @@
     <data name="Ok" xml:space="preserve">
         <value>Ok</value>
     </data>
+    <data name="ConfirmPassword" xml:space="preserve">
+        <value>Tulis kata kunci lagi</value>
+    </data>
+    <data name="CreateAccount" xml:space="preserve">
+        <value>Buat akun anda</value>
+    </data>
+    <data name="UserAccount" xml:space="preserve">
+        <value>Nama akun pengguna</value>
+    </data>
+    <data name="Understand" xml:space="preserve">
+        <value>Ya, mengerti</value>
+    </data>
+    <data name="Create" xml:space="preserve">
+        <value>Buat</value>
+    </data>
 </root>
