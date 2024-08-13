@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FundamentalMauiApp;
 
-public partial class DashboardPage : ContentPage
+public partial class SignupPage : ContentPage
 {
-    public DashboardPage()
+    public SignupPage()
     {
         InitializeComponent();
     }
