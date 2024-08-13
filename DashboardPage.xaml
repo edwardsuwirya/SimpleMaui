@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="FundamentalMauiApp.DashboardPage">
+    <Grid RowDefinitions="3*,7*">
+        <Image Aspect="AspectFill" Source="study_program.png"></Image>
+        <Grid BackgroundColor="DarkBlue" Opacity="0.8"></Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle
+                Margin="0,-30,0,0"
+                CornerRadius="30,30,0,0" Fill="White">
+            </RoundRectangle>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label Text="Create your account" FontSize="18" FontAttributes="Bold" />
+                <VerticalStackLayout Spacing="8" Margin="0,24">
+                    <Frame HasShadow="True" HeightRequest="48" Padding="0"
+                           BorderColor="White">
+                        <Entry Placeholder="User Account" Margin="8,0,0,0" VerticalOptions="Center"></Entry>
+                    </Frame>
+                    <Frame HasShadow="True" HeightRequest="48" Padding="0"
+                           BorderColor="White">
+                        <Entry Placeholder="Password" Margin="8,0,0,0" IsPassword="True" VerticalOptions="Center"></Entry>
+                    </Frame>
+                    <Frame HasShadow="True" HeightRequest="48" Padding="0"
+                           BorderColor="White">
+                        <Entry Placeholder="Confirm Your Password" Margin="8,0,0,0" IsPassword="True"
+                               VerticalOptions="Center">
+                        </Entry>
+                    </Frame>
+                    <HorizontalStackLayout>
+                        <CheckBox></CheckBox>
+                        <Label Text="I understand" VerticalOptions="Center"></Label>
+                    </HorizontalStackLayout>
+
+                    <Button Text="Create"></Button>
+
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
