@@ -116,5 +116,35 @@ namespace FundamentalMauiApp.Resources.String {
                 return ResourceManager.GetString("Ok", resourceCulture);
             }
         }
+        
+        internal static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        internal static string CreateAccount {
+            get {
+                return ResourceManager.GetString("CreateAccount", resourceCulture);
+            }
+        }
+        
+        internal static string UserAccount {
+            get {
+                return ResourceManager.GetString("UserAccount", resourceCulture);
+            }
+        }
+        
+        internal static string Understand {
+            get {
+                return ResourceManager.GetString("Understand", resourceCulture);
+            }
+        }
+        
+        internal static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
+            }
+        }
     }
 }

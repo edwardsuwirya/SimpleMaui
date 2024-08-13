@@ -23,12 +23,11 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
-                <Frame HasShadow="True" BorderColor="White" HeightRequest="64" WidthRequest="64" CornerRadius="32">
+                <Frame Style="{StaticResource IconCircleFrame}">
                     <Image Source="{StaticResource ImgUser}" HeightRequest="24" WidthRequest="24"></Image>
                 </Frame>
-                <Frame Grid.Column="1" HasShadow="True" HeightRequest="48" Margin="-24,0,0,0" Padding="0"
-                       BorderColor="White">
-                    <Entry x:Name="EntryUserName" Margin="12,0,0,0" VerticalOptions="Center"
+                <Frame Grid.Column="1" Margin="-24,0,0,0" Style="{StaticResource UserEntryFrame}">
+                    <Entry x:Name="EntryUserName" Style="{StaticResource UserEntry}" VerticalOptions="Center"
                            Placeholder="{x:Static   lang:Greetings.UserName}"
                            Keyboard="Email">
                     </Entry>
@@ -39,12 +38,11 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
-                <Frame HasShadow="True" BorderColor="White" HeightRequest="64" WidthRequest="64" CornerRadius="32">
+                <Frame Style="{StaticResource IconCircleFrame}">
                     <Image Source="{StaticResource ImgLock}" HeightRequest="24" WidthRequest="24"></Image>
                 </Frame>
-                <Frame Grid.Column="1" HasShadow="True" HeightRequest="48" Margin="-24,0,0,0" Padding="0"
-                       BorderColor="White">
-                    <Entry x:Name="EntryPassword" Margin="12,0,0,0" VerticalOptions="Center"
+                <Frame Grid.Column="1" Margin="-24,0,0,0" Style="{StaticResource UserEntryFrame}">
+                    <Entry x:Name="EntryPassword" Style="{StaticResource UserEntry}"
                            Placeholder="{x:Static   lang:Greetings.Password}"
                            IsPassword="True">
                     </Entry>
@@ -53,7 +51,7 @@
             <Frame x:Name="FrameButtonSignIn" Style="{DynamicResource ButtonFrameNormal}">
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="{StaticResource TinySpacing}">
                     <ActivityIndicator x:Name="IndicatorSignIn" IsRunning="True" HeightRequest="16" WidthRequest="16"
-                                       Color="White" />
+                                       Color="{StaticResource White}" />
                     <Label x:Name="LabelSignIn" Style="{DynamicResource ButtonLabelNormal}"
                            Text="{x:Static   lang:Greetings.SignIn}"
                            VerticalTextAlignment="Center"

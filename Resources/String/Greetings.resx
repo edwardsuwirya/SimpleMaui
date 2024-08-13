@@ -54,4 +54,19 @@
     <data name="Ok" xml:space="preserve">
         <value>OK</value>
     </data>
+    <data name="ConfirmPassword" xml:space="preserve">
+        <value>Confirm your password</value>
+    </data>
+    <data name="CreateAccount" xml:space="preserve">
+        <value>Create your account</value>
+    </data>
+    <data name="UserAccount" xml:space="preserve">
+        <value>User account</value>
+    </data>
+    <data name="Understand" xml:space="preserve">
+        <value>I understand</value>
+    </data>
+    <data name="Create" xml:space="preserve">
+        <value>Create</value>
+    </data>
 </root>
